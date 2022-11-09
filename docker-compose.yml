@@ -10,4 +10,4 @@ services:
         ports:
             - "8000:8000"
         environment:
-            JUPYTER_DOCKER_IMAGE: jupyterhub/singleuser
+            JUPYTER_DOCKER_IMAGE: ${JUPYTER_DOCKER_IMAGE}
