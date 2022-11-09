@@ -1,0 +1,10 @@
+[Unit]
+Description=jupyterhub
+After=docker.service
+
+[Service]
+Type=simple
+ExecStart=/opt/start_jupyter.sh 
+
+[Install]
+WantedBy=multi-user.target
