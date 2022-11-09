@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+    jupyterhub:
+        container_name: jupyterhub-docker
+        build:
+            dockerfile: Dockerfile
+            context: .
+        privileged: true
+        ports:
+            - "8000:8000"
+        environment:
+            JUPYTER_DOCKER_IMAGE: jupyterhub/singleuser
