@@ -32,5 +32,6 @@ COPY setting/opt/jupyterhub_config.py /opt/jupyterhub_config.py
 COPY setting/opt/start_jupyter.sh /opt/start_jupyter.sh
 COPY setting/etc/systemd/system/jupyterhub.service /etc/systemd/system/jupyterhub.service
 RUN ln -s /etc/systemd/system/jupyterhub.service /etc/systemd/system/multi-user.target.wants/jupyterhub.service
+COPY .env /opt/.env
 
 CMD ["/sbin/init"]
