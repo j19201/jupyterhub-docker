@@ -12,3 +12,8 @@ jupyterhubの環境をdockerで動かせるようにしたもの（Privileged不
 ```
 ./stop.sh
 ```
+
+### ボリュームの削除
+```
+docker volume rm `docker volume ls -q|grep jupyterhub-user`
+```
