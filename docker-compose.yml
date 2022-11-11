@@ -6,6 +6,15 @@ services:
         build:
             dockerfile: Dockerfile
             context: .
-        privileged: true
+        volumes:
+            - type: bind
+              source: /var/run/docker.sock
+              target: /var/run/docker.sock
         ports:
             - "8000:8000"
+        networks:
+            - default
+
+networks:
+    default:
+        name: jupyterhub-network

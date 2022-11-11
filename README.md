@@ -1,7 +1,15 @@
 # jupyterhub-docker
-jupyterhubの環境をdockerで動かせるようにしたもの
+jupyterhubの環境をdockerで動かせるようにしたもの（Privileged不使用）
 
-## 起動方法
+## 使用方法
+
+### 起動
 ```
 ./start.sh
+
+```
+
+### 停止
+```
+./stop.sh
 ```

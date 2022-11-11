@@ -506,6 +506,7 @@ c.Spawner.environment = {'GRANT_SUDO': 'yes'}
 notebook_dir = '/home/jovyan/work'
 c.DockerSpawner.notebook_dir = notebook_dir
 c.DockerSpawner.volumes = { 'jupyterhub-user-{username}': notebook_dir }
+c.DockerSpawner.network_name = 'jupyterhub-network'
 
 #from jupyter_client.localinterfaces import public_ips
 #c.JupyterHub.hub_ip = public_ips()[0]
