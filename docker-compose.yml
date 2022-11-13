@@ -8,6 +8,7 @@ services:
             context: .
         volumes:
             - type: bind
+              read_only: true
               source: /var/run/docker.sock
               target: /var/run/docker.sock
         ports:
