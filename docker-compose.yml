@@ -14,8 +14,30 @@ services:
         ports:
             - "8000:8000"
         networks:
-            - default
+            - jupyterhub
+    
+    moodle-php:
+        container_name: docker-moodle-php
+        build:
+          dockerfile: moodle/Dockerfile
+        ports:
+          - "80:80"
+        networks:
+            - moodle
+            - jupyterhub
+  
+    mariadb:
+        container_name: docker-moodle-mariadb
+        image: mariadb:latest
+        environment:
+            MARIADB_USER: moodle
+            MARIADB_PASSWORD: moodle
+            MARIADB_ROOT_PASSWORD: moodle      
+        networks:
+            - moodle
 
 networks:
-    default:
+    jupyterhub:
         name: jupyterhub-network
+    moodle:
+        name: moodle-network
