@@ -16,7 +16,7 @@ RUN apt-get update && apt-get -y install docker-ce docker-ce-cli containerd.io d
 #jupyter環境構築
 RUN npm install -g configurable-http-proxy
 RUN pip install --upgrade pip && \
-    pip install setuptools_rust jupyterhub dockerspawner && \
+    pip install setuptools_rust jupyterhub dockerspawner oauthlib jupyterhub-ltiauthenticator && \
     pip install --upgrade notebook && \
     pip install --upgrade jupyterlab
 
@@ -25,7 +25,7 @@ RUN adduser --disabled-password --gecos "" test && \
     echo test:test | chpasswd
 
 #設定ファイルをコピー
-COPY setting/opt/jupyterhub_config.py /opt/jupyterhub_config.py
+COPY setting/opt/jupyterhub_docker_config.py /opt/jupyterhub_config.py
 
 #起動に必要なファイルをコピー
 COPY setting/opt/start_jupyter.sh /opt/start_jupyter.sh

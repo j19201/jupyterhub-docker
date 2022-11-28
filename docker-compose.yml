@@ -2,7 +2,7 @@ version: "3"
 
 services:
     jupyterhub:
-        container_name: jupyterhub-docker
+        container_name: lti-jupyterhub-docker
         build:
             dockerfile: Dockerfile
             context: .
