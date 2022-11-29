@@ -1,5 +1,5 @@
-# jupyterhub-docker
-jupyterhub-ltiの環境をdockerで動かせるようにしたもの（Privileged不使用）
+# jupyterhub & moodle in docker
+jupyterhub-lti-lti in moodleの環境をdockerで動かせるようにしたもの（Privileged不使用）
 > **Warning**
 > ホストマシンのdocker.sockをバインドマウントしているため、ホストのdocker環境に影響を与えます  
 
