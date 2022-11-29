@@ -25,6 +25,8 @@ services:
         networks:
             - moodle
             - jupyterhub
+        profiles:
+            - with-moodle
   
     mariadb:
         container_name: docker-moodle-mariadb
@@ -35,6 +37,8 @@ services:
             MARIADB_ROOT_PASSWORD: moodle      
         networks:
             - moodle
+        profiles:
+            - with-moodle
 
 networks:
     jupyterhub:
