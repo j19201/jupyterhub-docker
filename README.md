@@ -27,7 +27,7 @@ or
 ```
 
 ### moodle側の設定例
-* ツールURL https://localhost:8000/hub/lti/launch
+* ツールURL http://localhost:8000/hub/lti/launch
 * コンシューマ鍵 .envファイルのLTI_CLIENT_KEY
 * 共有秘密鍵 .envファイルのLTI_SHARED_SECRET
 
